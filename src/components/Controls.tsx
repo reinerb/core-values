@@ -11,11 +11,13 @@ function Controls({ className }: ControlsProps) {
   const rejectValue = useCoreValuesStore((state) => state.rejectValue);
 
   return (
-    <div className={twMerge("flex gap-2", className)}>
-      <button onClick={rejectValue}>No</button>
-      <button onClick={skipValue}>Skip</button>
-      <button onClick={acceptValue}>Yes</button>
-    </div>
+    <>
+      <div className={twMerge("flex gap-4", className)}>
+        <button onClick={acceptValue}>Yes</button>
+        <button onClick={rejectValue}>No</button>
+      </div>
+      <button onClick={skipValue}>Skip For Now</button>
+    </>
   );
 }
 

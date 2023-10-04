@@ -26,7 +26,7 @@ export const baseValues: Value[] = [
 
   { name: "Caring", description: "to take care of others" },
   { name: "Challenge", description: "to take on difficult tasks and problems" },
-  { name: "Comfort", description: "tohave a pleasant and comfortable life" },
+  { name: "Comfort", description: "to have a pleasant and comfortable life" },
   {
     name: "Commitment",
     description: "to make enduring, meaningful commitments",
