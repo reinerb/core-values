@@ -11,6 +11,7 @@ export const baseValues: Value[] = [
   },
   { name: "Achievement", description: "to have important accomplishments" },
   { name: "Adventure", description: "to have new and exciting experiences" },
+  { name: "Art", description: "to appreciate or express myself in art" },
   { name: "Attractiveness", description: "to be physically attractive" },
   {
     name: "Authority",
@@ -18,26 +19,48 @@ export const baseValues: Value[] = [
   },
   { name: "Autonomy", description: "to be self-determined and independent" },
   { name: "Beauty", description: "to appreciate beauty around me" },
+  {
+    name: "Belonging",
+    description: "to have a sense of belonging, being part of",
+  },
+
   { name: "Caring", description: "to take care of others" },
   { name: "Challenge", description: "to take on difficult tasks and problems" },
-  { name: "Change", description: "to have a life full of change and variety" },
   { name: "Comfort", description: "tohave a pleasant and comfortable life" },
   {
     name: "Commitment",
     description: "to make enduring, meaningful commitments",
   },
   { name: "Compassion", description: "to feel and act on concern for others" },
+  { name: "Complexity", description: "to embrace the intricacies of life" },
+  {
+    name: "Compromise",
+    description: "to be willing to give and take in reaching agreements",
+  },
   {
     name: "Contribution",
     description: "to make a lasting contribution in the world",
   },
   { name: "Cooperation", description: "to work collaboratively with others" },
   {
+    name: "Courage",
+    description: "to be brave and strong in the face of adversity",
+  },
+
+  {
     name: "Courtesy",
     description: "to be considerate and polite toward others",
   },
   { name: "Creativity", description: "to have new and original ideas" },
+  {
+    name: "Curiosity",
+    description: "to seek out, experience, and learn new things",
+  },
   { name: "Dependability", description: "to be reliable and trustworthy" },
+  {
+    name: "Diligence",
+    description: "to be thorough and conscientious in whatever I do",
+  },
   { name: "Duty", description: "to carry out my duties and obligations" },
   { name: "Ecology", description: "to live in harmony with the environment" },
   {
@@ -49,10 +72,15 @@ export const baseValues: Value[] = [
     description: "to be loyal and true in relationships",
   },
   { name: "Fame", description: "to be known and recognized" },
+
   { name: "Family", description: "to have a happy, loving family" },
   { name: "Fitness", description: "to be physically fit and strong" },
   { name: "Flexibility", description: "to adjust to new circumstances easily" },
   { name: "Forgiveness", description: "to be forgiving of others" },
+  {
+    name: "Freedom",
+    description: "to be free from undue restrictions and limitations",
+  },
   { name: "Friendship", description: "to have close, supportive friends" },
   { name: "Fun", description: "to play and have fun" },
   { name: "Generosity", description: "to give what I have to others" },
@@ -61,9 +89,10 @@ export const baseValues: Value[] = [
     description: "to act in a manner that is true to who I am",
   },
   { name: "God's Will", description: "to seek and obey the will of God" },
+
+  { name: "Gratitude", description: "to be thankful and appreciative" },
   { name: "Growth", description: "to keep changing and growing" },
   { name: "Health", description: "to be physically well and healthy" },
-  { name: "Helpfulness", description: "to be helpful to others" },
   { name: "Honesty", description: "to be honest and truthful" },
   {
     name: "Hope",
@@ -74,9 +103,17 @@ export const baseValues: Value[] = [
     name: "Humor",
     description: "to see the humorous side of myself and the world",
   },
+  { name: "Imagination", description: "to have dreams and see possibilities" },
   { name: "Independence", description: "to be free from dependence on others" },
   { name: "Industry", description: "to work hard and well at my life tasks" },
+
   { name: "Inner Peace", description: "to experience personal peace" },
+  {
+    name: "Integrity",
+    description:
+      "to live my daily life in a way that is consistent with my values",
+  },
+  { name: "Intelligence", description: "to keep my mind sharp and active" },
   {
     name: "Intimacy",
     description: "to share my innermost experiences with others",
@@ -89,9 +126,11 @@ export const baseValues: Value[] = [
     name: "Knowledge",
     description: "to learn and contribute valuable knowledge",
   },
+  { name: "Leadership", description: "to inspire and guide others" },
   { name: "Leisure", description: "to take time to relax and enjoy" },
   { name: "Loved", description: "to be loved by those close to me" },
   { name: "Loving", description: "to give love to others" },
+
   { name: "Mastery", description: "to be competent in my everyday activities" },
   {
     name: "Mindfulness",
@@ -102,10 +141,12 @@ export const baseValues: Value[] = [
     description: "to avoid excesses and find a middle ground",
   },
   { name: "Monogamy", description: "to have one close, loving relationship" },
+  { name: "Music", description: "to enjoy or express myself in music" },
   {
     name: "Non-Conformity",
     description: "to question and challenge authority and norms",
   },
+  { name: "Novelty", description: "to have a life full of change and variety" },
   { name: "Nurturance", description: "to take care of and nurture others" },
   {
     name: "Openness",
@@ -115,15 +156,24 @@ export const baseValues: Value[] = [
     name: "Order",
     description: "to have a life that is well-ordered and organized",
   },
+
   {
     name: "Passion",
     description: "to have deep feelings about ideas, activities, or people",
   },
+  { name: "Patriotism", description: "to love, serve, and protect my country" },
   { name: "Pleasure", description: "to feel good" },
   { name: "Popularity", description: "to be well-liked by many people" },
   { name: "Power", description: "to have control over others" },
+  {
+    name: "Practicality",
+    description: "to focus on what is practical, prudent, and sensible",
+  },
+  { name: "Protect", description: "to protect and keep safe those I love" },
+  { name: "Provide", description: "to provide for and take care of my family" },
   { name: "Purpose", description: "to have meaning and direction in my life" },
   { name: "Rationality", description: "to be guided by reason and logic" },
+
   {
     name: "Realism",
     description: "to see and act realistically and practically",
@@ -143,6 +193,7 @@ export const baseValues: Value[] = [
     description: "to have a deep and honest understanding of myself",
   },
   { name: "Service", description: "to be of service to others" },
+
   {
     name: "Sexuality",
     description: "to have an active and satisfying sex life",
