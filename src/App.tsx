@@ -1,5 +1,12 @@
+import ValueCard from "./components/ValueCard";
+
 function App() {
-  return <h1>Hello world</h1>;
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center">
+      <h1>Value Cards</h1>
+      <ValueCard />
+    </main>
+  );
 }
 
 export default App;
