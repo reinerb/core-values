@@ -6,13 +6,9 @@ type ControlsProps = {
 };
 
 function Controls({ className }: ControlsProps) {
-  const { acceptValue, rejectValue, skipValue } = useCoreValuesStore(
-    (state) => ({
-      acceptValue: state.acceptValue,
-      rejectValue: state.rejectValue,
-      skipValue: state.skipValue,
-    }),
-  );
+  const acceptValue = useCoreValuesStore((state) => state.acceptValue);
+  const skipValue = useCoreValuesStore((state) => state.skipValue);
+  const rejectValue = useCoreValuesStore((state) => state.rejectValue);
 
   return (
     <div className={twMerge("flex gap-2", className)}>
