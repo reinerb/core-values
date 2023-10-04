@@ -1,6 +1,6 @@
 /**
  * Randomize the order of elements in an array
- * @param {[]} array - The array to be randomized
+ * @param array - The array to be randomized
  */
 export const randomizeArray = <T>(array: Array<T>) => {
   const newArray = [...array];
