@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { baseValues, type Value } from "../Values";
+import { randomizeArray } from "../functions/randomizeArray";
 
 type CoreValuesState = {
   index: number;
@@ -12,7 +13,7 @@ type CoreValuesState = {
 
 export const useCoreValuesStore = create<CoreValuesState>((set) => ({
   index: 0,
-  values: [...baseValues],
+  values: randomizeArray(baseValues),
   yesValues: [],
   // Move a Value to the yesValues array
   acceptValue: () => {
