@@ -1,13 +1,12 @@
 import { twMerge } from "tailwind-merge";
-import { useCoreValuesStore } from "../utils/hooks/useCoreValuesStore";
+import { Value } from "../utils/Values";
 
 type ValueCardProps = {
+  value: Value;
   className?: string;
 };
 
-function ValueCard({ className }: ValueCardProps) {
-  const value = useCoreValuesStore((state) => state.values[state.index]);
-
+function ValueCard({ value, className }: ValueCardProps) {
   return value ? (
     <div
       className={twMerge(
