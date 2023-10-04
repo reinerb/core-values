@@ -7,7 +7,7 @@ type CoreValuesState = {
   yesValues: Value[];
   noValues: Value[];
   acceptValue: () => void;
-  refuseValue: () => void;
+  rejectValue: () => void;
   skipValue: () => void;
 };
 
@@ -26,7 +26,7 @@ export const useCoreValuesStore = create<CoreValuesState>((set) => ({
       ],
     })),
   // Move a Value to the NoValues array
-  refuseValue: () =>
+  rejectValue: () =>
     set((state) => ({
       noValues: [...state.noValues, state.values[0]],
       values: [
