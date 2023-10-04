@@ -5,7 +5,6 @@ type CoreValuesState = {
   index: number;
   values: Value[];
   yesValues: Value[];
-  noValues: Value[];
   acceptValue: () => void;
   rejectValue: () => void;
   skipValue: () => void;
@@ -15,7 +14,6 @@ export const useCoreValuesStore = create<CoreValuesState>((set) => ({
   index: 0,
   values: [...baseValues],
   yesValues: [],
-  noValues: [],
   // Move a Value to the yesValues array
   acceptValue: () => {
     set((state) => ({
@@ -31,11 +29,8 @@ export const useCoreValuesStore = create<CoreValuesState>((set) => ({
       index: state.index >= state.values.length ? 0 : state.index,
     }));
   },
-  // Move a Value to the NoValues array
+  // Remove a Value
   rejectValue: () => {
-    set((state) => ({
-      noValues: [...state.noValues, state.values[state.index]],
-    }));
     set((state) => ({
       values: [
         ...state.values.slice(0, state.index),
