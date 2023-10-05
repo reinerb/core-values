@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { useCoreValuesStore } from "../utils/hooks/useCoreValuesStore";
+import { useCoreValuesStore } from "../../../utils/hooks/useCoreValuesStore";
 
 type ControlsProps = {
   className?: string;

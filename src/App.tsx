@@ -1,5 +1,5 @@
 import Layout from "./components/Layout";
-import StageOne from "./components/Stages/StageOne";
+import StageOne from "./components/Stages/StageOne/StageOne";
 import StageZero from "./components/Stages/StageZero";
 import { useCoreValuesStore } from "./utils/hooks/useCoreValuesStore";
 
