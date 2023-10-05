@@ -1,5 +1,8 @@
 import Layout from "./components/Layout";
+import StageFive from "./components/Stages/StageFive";
+import StageFour from "./components/Stages/StageFour";
 import StageOne from "./components/Stages/StageOne/StageOne";
+import StageSix from "./components/Stages/StageSix";
 import StageThree from "./components/Stages/StageThree";
 import StageTwo from "./components/Stages/StageTwo";
 import StageZero from "./components/Stages/StageZero";
@@ -17,6 +20,12 @@ function App() {
       return <StageTwo />;
     case 3:
       return <StageThree />;
+    case 4:
+      return <StageFour />;
+    case 5:
+      return <StageFive />;
+    case 6:
+      return <StageSix />;
     default:
       return (
         <Layout>

@@ -8,11 +8,13 @@ type CoreValuesState = {
   values: Value[];
   yesValues: Value[];
   topTen: Value[];
+  topFive: Value[];
   advance: () => void;
   skipValue: () => void;
   rejectValue: () => void;
   acceptValue: () => void;
   toggleTopTen: (value: Value) => void;
+  toggleTopFive: (value: Value) => void;
 };
 
 export const useCoreValuesStore = create<CoreValuesState>((set) => ({
@@ -21,6 +23,7 @@ export const useCoreValuesStore = create<CoreValuesState>((set) => ({
   values: randomizeArray(baseValues),
   yesValues: [],
   topTen: [],
+  topFive: [],
 
   // Advance to the next stage
   advance: () => set((state) => ({ stage: state.stage + 1 })),
@@ -79,7 +82,7 @@ export const useCoreValuesStore = create<CoreValuesState>((set) => ({
     });
   },
 
-  // Removes a value from the top 10 list
+  // Toggles a value in the top 10 list
   toggleTopTen: (value) => {
     set((state) => {
       const index = state.topTen.map((value) => value.name).indexOf(value.name);
@@ -92,6 +95,25 @@ export const useCoreValuesStore = create<CoreValuesState>((set) => ({
           }
         : {
             topTen: [...state.topTen, value],
+          };
+    });
+  },
+
+  // Toggles a value in the top 5 list
+  toggleTopFive: (value) => {
+    set((state) => {
+      const index = state.topFive
+        .map((value) => value.name)
+        .indexOf(value.name);
+      return index >= 0
+        ? {
+            topFive: [
+              ...state.topFive.slice(0, index),
+              ...state.topFive.slice(index + 1),
+            ],
+          }
+        : {
+            topFive: [...state.topFive, value],
           };
     });
   },

@@ -9,16 +9,14 @@ type StageThreeProps = {
 };
 
 function StageThree({ className }: StageThreeProps) {
-  const values = useCoreValuesStore((state) =>
-    state.yesValues.length === 0 ? state.values : state.yesValues,
-  );
-  const topTen = useCoreValuesStore((state) => state.topTen);
-  const toggleTopTen = useCoreValuesStore((state) => state.toggleTopTen);
+  const values = useCoreValuesStore((state) => state.topTen);
+  const topFive = useCoreValuesStore((state) => state.topFive);
+  const toggleTopFive = useCoreValuesStore((state) => state.toggleTopFive);
   const advance = useCoreValuesStore((state) => state.advance);
 
   const handleChecked = (e: React.ChangeEvent, value: Value) => {
     e.preventDefault;
-    toggleTopTen(value);
+    toggleTopFive(value);
   };
 
   return (
@@ -28,7 +26,7 @@ function StageThree({ className }: StageThreeProps) {
         className,
       )}
     >
-      <p className="col-span-full">Select your ten most important values.</p>
+      <p className="col-span-full">Select your five most important values.</p>
       {values.map((value) => (
         <div key={value.name} className="group">
           <input
@@ -36,8 +34,8 @@ function StageThree({ className }: StageThreeProps) {
             id={value.name}
             name={value.name}
             className="peer sr-only"
-            disabled={topTen.length >= 10 && !topTen.includes(value)}
-            checked={topTen.includes(value)}
+            disabled={topFive.length >= 5 && !topFive.includes(value)}
+            checked={topFive.includes(value)}
             onChange={(e) => handleChecked(e, value)}
           />
           <ValueCard
@@ -49,9 +47,9 @@ function StageThree({ className }: StageThreeProps) {
         </div>
       ))}
       <button
-        disabled={topTen.length !== 10}
+        disabled={topFive.length !== 5}
         onClick={advance}
-        className="col-span-full justify-self-end disabled:bg-pink-500"
+        className="col-start-3 self-end justify-self-end disabled:bg-pink-500"
       >
         Continue
       </button>
