@@ -1,24 +1,33 @@
 import { twMerge } from "tailwind-merge";
 import { Value } from "../utils/Values";
 
-type ValueCardProps = {
+type ValueCardOwnProps<C extends React.ElementType> = {
   value: Value;
-  className?: string;
+  as?: C;
 };
 
-function ValueCard({ value, className }: ValueCardProps) {
-  return value ? (
-    <div
+type ValueCardProps<C extends React.ElementType> = ValueCardOwnProps<C> &
+  Omit<React.ComponentProps<C>, keyof ValueCardOwnProps<C>>;
+
+function ValueCard<C extends React.ElementType = "div">({
+  value,
+  as,
+  className,
+  ...props
+}: ValueCardProps<C>) {
+  const Component = as || "div";
+
+  return (
+    <Component
       className={twMerge(
-        "flex flex-col items-center gap-4 border border-black px-8 py-4",
+        "grid h-36 max-w-md grid-rows-2 justify-items-center gap-4 border border-black px-2 py-1 text-center sm:px-8 sm:py-4",
         className,
       )}
+      {...props}
     >
-      <h2 className="text-xl font-semibold">{value.name}</h2>
-      <p>{value.description}</p>
-    </div>
-  ) : (
-    <div>No values left. Sorry!</div>
+      <h2 className="self-end text-xl font-semibold">{value.name}</h2>
+      <p className="self-start">{value.description}</p>
+    </Component>
   );
 }
 

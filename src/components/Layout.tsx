@@ -11,7 +11,7 @@ function Layout({ children, className }: MainLayoutProps) {
     <div className="grid min-h-screen place-items-center">
       <main
         className={twMerge(
-          "flex flex-col items-center justify-center",
+          "mx-4 flex flex-col items-center justify-center md:mx-8 md:my-4",
           className,
         )}
       >
