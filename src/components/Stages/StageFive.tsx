@@ -22,7 +22,7 @@ function StageThree({ className }: StageThreeProps) {
   return (
     <Layout
       className={twMerge(
-        "grid w-fit grid-cols-1 justify-center gap-1 md:grid-cols-2 xl:grid-cols-3",
+        "grid w-fit grid-cols-1 justify-center gap-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4",
         className,
       )}
     >
